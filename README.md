@@ -1,7 +1,7 @@
-#Estudo Django Rest Framework
+# Estudo Django Rest Framework
 Está sendo realizado o desenvolvimento de uma api de Pontos Turisticos
 
-###Checklist
+### Checklist
 - [x] Construir as APP's
 - [x] Implementar o CRUD básico da API (viewsets e serializers)
 - [ ] Sobrescrever todo o CRUD (recursos avançados)
