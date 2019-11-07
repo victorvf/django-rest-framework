@@ -13,6 +13,7 @@ from atracoes.api.viewsets import AtracoesViewSet
 from avaliacoes.api.viewsets import AvaliacoesViewSet
 from comentarios.api.viewsets import ComentariosViewSet
 from localizacao.api.viewsets import LocalizacaoViewSet
+from rest_framework.authtoken import views
 
 router = routers.DefaultRouter()
 router.register(r'pontoturistico', PontoTuristicoViewSet, base_name='PontoTuristico')
@@ -25,4 +26,5 @@ router.register(r'localizacao', LocalizacaoViewSet)
 urlpatterns = [
     path('',include(router.urls)),
     path('admin/', admin.site.urls),
+    path('api-token-auth/', views.obtain_auth_token),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

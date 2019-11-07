@@ -2,7 +2,13 @@ from pontos_turisticos import models
 from rest_framework import viewsets, filters
 from . import serializers
 
+from rest_framework.permissions import IsAuthenticated
+
 class PontoTuristicoViewSet(viewsets.ModelViewSet):
+
+    #autorização
+    permission_classes = (IsAuthenticated,)
+    ####
 
     queryset = models.PontoTuristico.objects.all() #se eu quiser fazer mais de um filtro, eu tenho que usar o get_queryset
     serializer_class = serializers.PontoTuristicoSerializer
